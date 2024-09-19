@@ -1,20 +1,22 @@
 import { Component } from '@angular/core';
 
+import { MaterialModule } from '../material/material.module';
+
 @Component({
   selector: 'app-user-profile',
   standalone: true,
-  imports: [],
+  imports: [MaterialModule],
   templateUrl: './user-profile.component.html',
   styleUrl: './user-profile.component.scss'
 })
 export class UserProfileComponent {
   user: User = {
-    name: '',
-    email: '',
-    age: null,
+    name: 'Denis',
+    email: 'denis@gmail.com',
+    age: 21,
     address: {
-      street: '',
-      city: '',
+      street: '123 Main St',
+      city: 'Anytown',
     }
 }
 }
