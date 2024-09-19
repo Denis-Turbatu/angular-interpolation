@@ -8,5 +8,22 @@ import { Component } from '@angular/core';
   styleUrl: './user-profile.component.scss'
 })
 export class UserProfileComponent {
-
+  user: User = {
+    name: '',
+    email: '',
+    age: null,
+    address: {
+      street: '',
+      city: '',
+    }
 }
+}
+interface User {
+    name: string;
+    email: string;
+    age: number | null;
+    address?: {
+      street: string,
+      city: string,
+    }
+};
